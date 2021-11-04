@@ -20,8 +20,8 @@
 				<tr th:each="origenllamada:${origenllamadas}">
 					<td th:text="${origenllamada.id}"></td>
 					<td th:text="${origenllamada.origen_llamada}"></td>
-					<td><a class="btn btn-warning">Editar</a>
-					<a class="btn btn-danger">Eliminar</a>
+					<td><a th:href="@{/editarOrigen/}+${origenllamada.id}"class="btn btn-warning">Editar</a>
+					<a th:onclick="eliminarOrigen([[${origenllamada.id}]])" class="btn btn-danger">Eliminar</a>
 					</td>
 				</tr>
 			</tbody>
@@ -30,6 +30,8 @@
 		</table>
 
 	</div>
-
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="funciones.js"></script>
 </body>
 </html>

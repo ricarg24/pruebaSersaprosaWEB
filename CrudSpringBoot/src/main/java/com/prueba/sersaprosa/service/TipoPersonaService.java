@@ -27,7 +27,7 @@ public class TipoPersonaService implements ItipollamadaService{
 	@Override
 	public Optional<Tipollamada> listaId(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return tipollamada.findById(id);
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class TipoPersonaService implements ItipollamadaService{
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		tipollamada.deleteById(id);
 	}
 
 }

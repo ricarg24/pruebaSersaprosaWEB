@@ -25,7 +25,7 @@ public class GestionService implements IgestionService{
 	@Override
 	public Optional<Gestion> listaId(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return gestion.findById(id);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class GestionService implements IgestionService{
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		gestion.deleteById(id);
 	}
 	
 	

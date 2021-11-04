@@ -26,7 +26,7 @@ public class OrigenllamadaService implements IorigenllamadaService {
 	@Override
 	public Optional<Origenllamada> listaId(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return origenllamada.findById(id);
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class OrigenllamadaService implements IorigenllamadaService {
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		origenllamada.deleteById(id);
 	}
 
 	

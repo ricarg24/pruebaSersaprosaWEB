@@ -29,9 +29,15 @@ public class GestionService implements IgestionService{
 	}
 
 	@Override
-	public int save(Gestion gestion) {
+	public int save(Gestion ges) {
 		// TODO Auto-generated method stub
-		return 0;
+       int res=0;
+       Gestion g=gestion.save(ges);
+       if(!g.equals(null)) {
+    	   res=1;
+       }
+		
+		return res;
 	}
 
 	@Override

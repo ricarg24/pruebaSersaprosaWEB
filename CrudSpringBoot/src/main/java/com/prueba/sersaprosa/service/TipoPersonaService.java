@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.prueba.sersaprosa.interfaceService.ItipollamadaService;
 import com.prueba.sersaprosa.interfaces.Itipollamada;
+import com.prueba.sersaprosa.model.Origenllamada;
 import com.prueba.sersaprosa.model.Tipollamada;
 
 @Service
@@ -30,9 +31,15 @@ public class TipoPersonaService implements ItipollamadaService{
 	}
 
 	@Override
-	public int save(Tipollamada tipollamada) {
+	public int save(Tipollamada tipollamda) {
 		// TODO Auto-generated method stub
-		return 0;
+		int res=0;
+		Tipollamada g=tipollamada.save(tipollamda);
+	       if(!g.equals(null)) {
+	    	   res=1;
+	       }
+			
+			return res;
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class Gestion {
 	private int origen_llamada_id;
 	private int tipo_llamada_id;
 	private String nombre;
-	private String gestion;
+	private String gestion_des;
 	private String telefono;
 	/**
 	 * 
@@ -39,7 +39,7 @@ public class Gestion {
 		this.origen_llamada_id = origen_llamada_id;
 		this.tipo_llamada_id = tipo_llamada_id;
 		this.nombre = nombre;
-		this.gestion = gestion;
+		this.gestion_des = gestion;
 		this.telefono = telefono;
 	}
 	public int getId() {
@@ -66,14 +66,15 @@ public class Gestion {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getGestion() {
-		return gestion;
-	}
-	public void setGestion(String gestion) {
-		this.gestion = gestion;
-	}
+	
 	public String getTelefono() {
 		return telefono;
+	}
+	public String getGestion_des() {
+		return gestion_des;
+	}
+	public void setGestion_des(String gestion_des) {
+		this.gestion_des = gestion_des;
 	}
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;

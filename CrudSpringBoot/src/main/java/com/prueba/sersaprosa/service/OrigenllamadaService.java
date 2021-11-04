@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.prueba.sersaprosa.interfaceService.IorigenllamadaService;
 import com.prueba.sersaprosa.interfaces.Iorigenllamada;
+import com.prueba.sersaprosa.model.Gestion;
 import com.prueba.sersaprosa.model.Origenllamada;
 
 @Service
@@ -31,7 +32,13 @@ public class OrigenllamadaService implements IorigenllamadaService {
 	@Override
 	public int save(Origenllamada origenllamda) {
 		// TODO Auto-generated method stub
-		return 0;
+		int res=0;
+		Origenllamada g=origenllamada.save(origenllamda);
+	       if(!g.equals(null)) {
+	    	   res=1;
+	       }
+			
+			return res;
 	}
 
 	@Override
